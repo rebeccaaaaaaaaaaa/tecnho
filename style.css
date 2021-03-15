@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+    padding: 0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    background: linear-gradient(to right, #1a1a1a 30%, #fff 30%);
+    font-family: 'Noto Serif', serif;
+}
+
+#app{
+
+	padding: 0 80px;
+
+}
+
+.header{
+
+	display: flex;
+	justify-content: space-between;
+	max-width: 900px;
+	padding: 25px 0;
+	margin: 0 auto;	
+}
+
+.logo{
+
+	width: 80px;
+}
+
+.esgotado{
+	background: gray;
+}
+
+.carrinho_menu:after{
+	content: "";
+	display: inline-block;
+	background: url("./assets/carrinho.svg") no-repeat center center;
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+}
+
+.carrinho_menu{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+/* Lista produtos */
+
+.produtos{
+
+	max-width: 900px;
+	margin: 100px auto 0 auto;
+}
+
+.produto{
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+	background: #fff;
+	box-shadow: 0px 3px 6px #00000016;
+	cursor: pointer;
+}
+
+.produto_img{
+
+	max-width: 300px;
+	margin-right: 2rem;
+}
+
+.produto_titulo{
+
+	font-size: 2rem;
+	line-height: 1;
+}
+
+.produto_preco{
+
+	color: rgb(0, 0, 0 , 5);
+}
+
+.modal::before{
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgb(0, 0, 0 , .5);
+}
+
+.modal{
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 3px 6px 9px #00000016;
+
+	
+
+	
+}
+
+.modal_container{
+	position: relative;
+	z-index: 1;
+	display: grid;
+	align-items: end;
+	background: #fff;
+	grid-gap: 50px;
+	padding: 0px  50px 50px 0;
+	animation: fadeIn .3s forwards;
+	background: linear-gradient(to right, transparent 250px, rgb(231, 231, 231) 250px);
+}
+
+@keyframes fadeIn{
+
+	from{
+
+		opacity: 0;
+		transform: translate3D(50px, 0, 0);
+	}
+
+	to{
+		opacity: 1;
+		transform: translate3d(0PX, 0 , 0);
+	}
+}
+
+.modal_titulo{
+	font-size: 2rem;
+}
+
+.modal_btn{
+	margin-top: 80px;
+	background: #000;
+	cursor: pointer;
+	color: #fff;
+	border: none;
+	font-size: 1rem;
+	padding: 10px 25px;
+	font-family: "Noto Serif";
+}
+
+.modal_btn:active{
+	background: rgb(66, 65, 65);
+}
+
+.fechar_modal{
+	border-radius: 50%;
+	border: 2px solid #000;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	cursor: pointer;
+	font-size: 1rem;
+	box-shadow: 3px 6px 9px #00000016;
+
+}
+
+
+.modal_img{
+
+	margin-top: 50px;
+}
+
+.modal_img img{
+
+	max-width: 300px;
+	display: block;
+	box-shadow: 3px 6px 9px #00000016;
+}
+
+.modal_dados{
+	grid-column: 2;
+	max-width: 600px;
+}
+
+.avaliacoes{
+
+	grid-column: 2;
+}
+
+.avaliacao{
+
+	border-bottom: 1px solid #00000016;
+	padding-bottom: 20px;
+}
+
+.avaliacao_descricao{
+	color: rgb(0, 0, 0 , .7);
+	margin: 20px 0;
+}
+
+.avaliacao_nome{
+	font-weight: bold;
+}
+
+.avaliacao{
+	font-size: 1.75rem;
+}
